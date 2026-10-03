@@ -1,0 +1,15 @@
+{"cmd":"init","id":"ROOT","name":"总公司"}
+{"cmd":"dept_add","id":"ENG","name":"工程部","parent_id":"ROOT"}
+{"cmd":"dept_add","id":"BE","name":"后端组","parent_id":"ENG"}
+{"cmd":"post_add","id":"P1","name":"工程师","dept_id":"BE"}
+{"cmd":"post_add","id":"P2","name":"架构师","dept_id":"ENG"}
+{"cmd":"employee_add","id":"E1","name":"张三"}
+{"cmd":"assignment_add","id":"A1","employee_id":"E1","post_id":"P1","start":"2026-01-01","end":"2026-06-01"}
+{"cmd":"transfer","id":"A1","new_assignment_id":"A2","new_post_id":"P2","date":"2026-03-01"}
+{"cmd":"query_at","date":"2026-03-01"}
+{"cmd":"dept_move","id":"BE","new_parent_id":"ROOT"}
+{"cmd":"query_at","date":"2026-03-01"}
+{"cmd":"dept_count","dept_id":"ROOT","date":"2026-03-01","recursive":true}
+{"cmd":"history","employee_id":"E1"}
+{"cmd":"assignment_add","id":"BAD","employee_id":"NOPE","post_id":"P1","start":"2026-01-01"}
+{"cmd":"query_at","date":"not-a-date"}
